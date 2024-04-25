@@ -1,0 +1,92 @@
+@import "../sass/resets";
+@import "../sass/center";
+@import "../sass/function";
+
+$bg-green: green;
+$bg-yellow: yellow;
+$bg-blue: blue;
+$bg-white: white;
+$wd-body: 100%;
+
+body{
+    @include center();
+
+    width: $wd-body;
+    height: 100vh;
+
+    background-color: alteraCor($wd-body);
+}
+
+.green{
+    background: $bg-green;
+    @include center();
+
+    width: 400px;
+    height: 300px;
+} 
+
+.yellow{
+    background: $bg-yellow;
+
+    @include center();
+
+    width: 200px;
+    height: 200px;
+
+    transform: rotate(45deg);
+} 
+
+.blue{
+    background: $bg-blue;
+
+    @include center();
+
+    width: 150px;
+    height: 150px;
+
+    transform: rotate(-45deg);
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.faixa{
+    background: $bg-white;
+    
+    width: 100%;
+    height: 14px;
+
+    position: absolute;
+
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.estrela{
+    background: $bg-white;
+
+    width: 3px;
+    height: 3px;
+
+    position: absolute;
+
+    bottom: 60px;
+}
+
+.estrela:first-child{
+    transform: translate(0, 0);
+}
+
+.estrela:nth-child(2n){
+    transform: translate(-15px, 10px);
+}
+.estrela:nth-child(3n){
+    transform: translate(-25px, 6px);
+}
+.estrela:nth-child(4n){
+    transform: translate(16px, -3px);
+}
+.estrela:last-of-type{
+    transform: translate(26px, 8px);
+}
