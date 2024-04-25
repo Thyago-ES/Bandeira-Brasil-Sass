@@ -1,0 +1,11 @@
+@function alteraCor($wd-body) {
+    $bg-color: ();
+    
+    @if $wd-body <= 50% {
+        $bg-color: red;
+    }@else{
+        $bg-color: white;
+    }
+
+    @return $bg-color;
+}
